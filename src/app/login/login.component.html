@@ -1,0 +1,44 @@
+<ActionBar backgroundColor="#50bf5a">
+    <Label text=""></Label>
+</ActionBar>
+
+<StackLayout class='login-bg'>
+    <FlexboxLayout flexDirection="column">
+        <Label text="" height="125"></Label>
+        <FLexboxLayout flexDirection="row" alignItems="center" justifyContent="center">
+            <Label text="&#xf4e5;&nbsp;" height="70" class="login-logo"></Label>
+            <Label text="Pistachio" height="70" class="login-logo"></Label>
+        </FLexboxLayout>
+    </FlexboxLayout>
+
+    <Label text="Email" height="25" class="login-label"></Label>
+    <FlexboxLayout flexDirection="row" class="login-field">
+        <FlexboxLayout flexDirection="column" justifyContent="center">
+            <Label text="&#xf0e0;" class="login-logo2"></Label>
+        </FlexboxLayout>
+        <FlexboxLayout flexDirection="column" justifyContent="center">
+            <TextField hint="Enter your Email" class="login-tf"></TextField>
+        </FlexboxLayout>
+    </FlexboxLayout>
+
+    <Label text="Password" height="25" class="login-label"></Label>
+    <FlexboxLayout flexDirection="row" class="login-field">
+        <FlexboxLayout flexDirection="column" justifyContent="center">
+            <Label text="&#xf084;" class="login-logo2" fontFamily="fa-solid-900"></Label>
+        </FlexboxLayout>
+        <FlexboxLayout flexDirection="column" justifyContent="center">
+            <TextField secure="true" hint="*******" class="login-tf"></TextField>
+        </FlexboxLayout>
+    </FlexboxLayout>
+
+    <FlexboxLayout flexDirection="row" justifyContent="flex-end" width="75%">
+        <Button text="Forgot Password?" class="login-fp"></Button>
+    </FlexboxLayout>
+
+    <Button class="login-btn" text="LOGIN" [nsRouterLink]="['/home']"></Button>
+
+    <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" width="75%">
+        <Label text="Don't have an Account?" class="login-dha"></Label>
+        <Button text="SIGN UP" class="login-su"></Button>
+    </FlexboxLayout>
+</StackLayout>

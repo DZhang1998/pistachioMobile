@@ -1,0 +1,25 @@
+<ActionBar class="dash">
+  <Label text="Dashboard"></Label>
+</ActionBar>
+
+<StackLayout>
+
+  <Flexboxlayout flexDirection="row" class="dash-pfc">
+    <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" class="dash-pfpBox">
+      <Label class="dash-pfp" text="&#xf007;"></Label>
+    </FlexboxLayout>
+    <Flexboxlayout flexDirection="column" justifyContent="center" class="dash-pfiBox">
+      <Label text="John Doe" class="dash-pfi"></Label>
+      <Label text="Location, STATE" class="dash-pfi"></Label>
+    </Flexboxlayout>
+  </Flexboxlayout>
+
+  <ListView [items]="items">
+    <ng-template let-item="item">
+      <StackLayout [nsRouterLink]="['../home', item.id]">
+        <Label [text]="item.name"></Label>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+
+</StackLayout>
